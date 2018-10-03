@@ -2,15 +2,26 @@
 
 body {
   margin: 0;
-  padding: 0;
-  background-color: #fff;
   font-family: "Lucida Grande";
-  font-size: 16px;
+}
 
+h1 {
+  font-size: 42px;
+  font-family: "Lora", serif;
+  margin: 40px 0 25px;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+p {
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .navBar {
-  background-color: #fff;
   height: 75px;
   margin: 0 220px;
   border-bottom: 1px solid #ccc;
@@ -22,40 +33,31 @@ body {
 
 .navBar a {
   font-size: 10px;
-  color: #ccc;
+  color: #333;
   text-decoration: none;
+  margin-top: 10px;
+}
+
+.navBar span {
+  font-weight: bold;
 }
 
 .navBar button {
- background-color: green;
+ background-color: #1aa77d;
  color: #fff;
  width: 100px;
  height: 30px;
- border: 1px solid green;
+ border: 1px solid #1aa77d;
  border-radius: 5px;
-}
-
-h1 {
-  font-size: 42px;
-  font-family: "Lora", serif;
-  margin: 40px 0 25px;
-}
-
-h2 {
-  font-weight: bold;
-  line-height: 16px;
-  font-size: 16px;
-}
-
-p {
-font-size: 12px;
-line-height: 16px;
+ margin-left: 25px;
+ margin-top: 10px;
 }
 
 .mainContainer {
   background-color: #fff;
   margin-left: 220px;
   margin-right: 220px;
+  margin-bottom: 40px;
 }
 
 .topBox {
@@ -66,8 +68,7 @@ line-height: 16px;
 }
 
 .topBoxText {
-  width: 488px;
-  margin-right: 10px;
+  width: 490px;
 }
 
 .topBoxText button {
@@ -80,34 +81,169 @@ line-height: 16px;
   margin: 40px 10px 40px 0;
 }
 
+#whiteButton {
+  background-color: #fff;
+  color: #000;
+}
+
 .topBox img {
-  height: 200px;
+  height: 270px;
   margin-top: 40px;
   display: flex;
 }
 
 .grid {
-  margin-top: 20px;
-  width: 100%;
-  height: auto;
+  margin-top: 10px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
 }
+
 .gridBox {
   width: 49%;
+  height: 256px;
   margin-top: 15px;
-  border: 0.5px solid #222;
+  border: 0.5px solid #ccc;
   display: flex;
+  flex-flow: row;
 }
 
-.gridBox img {
-  width: 45%;
+.gridBoxLeft {
+  width: 46%;
+}
+
+.gridBoxLeft img {
+  width: 100%;
   height: 255px;
   object-fit: cover;
 }
 
-.gridBoxText {
+.gridBoxRight {
+  width: 52%;
   padding: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.gridBoxText h2 {
   font-weight: bold;
+  margin-top: 0;
+}
+
+.gridBoxText p {
+  font-weight: 500;
+}
+
+.writerBox {
+  bottom: 10px;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.writerImage img {
+  width: 40px;
+  border-radius: 50%;
+  padding-right: 5px;
+}
+
+.writerText p {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.writerText span {
+  font-weight: 500;
+}
+
+.writerBookmark {
+  width: 12px;
+  height: 17px;
+  padding-left: 30px;
+  position: absolute;
+  bottom: 30px;
+  right: 16px;
+}
+
+@media (max-width: 900px) {
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .navBar {
+    margin: 20px;
+  }
+
+  .mainContainer {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .topBoxText {
+    width: 728px;
+  }
+
+  .topBoxText button {
+    margin: 20px 10px 40px 0;
+  }
+
+  .topBox img {
+    display: none;
+  }
+
+  .grid {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .gridBox {
+    width: 728px;
+    height: 328px;
+    display: flex;
+    flex-flow: column;
+  }
+
+  .gridBoxLeft {
+    width: 100%;
+  }
+  .gridBoxLeft img {
+    width: 727px;
+    height: 170px;
+  }
+
+  .gridBoxRight {
+    width: calc(728px - 32px);
+    height: 158px;
+    /* position: relative; */
+  }
+
+  .writerBox {
+    margin-bottom: 0;
+  }
+
+  .writerText {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .writerImage img {
+    padding-right: 5px;
+  }
+
+  .writerBookmark {
+    right: 16px;
+  }
+
 }
