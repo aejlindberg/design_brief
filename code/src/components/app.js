@@ -6,17 +6,21 @@ class App extends React.Component {
     return (
 <div className="App">
   <div className="navBar">
-    <a href=""><span>Home</span></a>
-    <a href="">Technology</a>
-    <a href="">Creativity</a>
-    <a href="">Entrepreneurship</a>
-    <a href="">Self</a>
-    <a href="">Culture</a>
-    <a href="">Digital design</a>
-    <a href="">Popular on Medium</a>
-    <a href="">Politics</a>
-    <a href="">More</a>
-    <button>Get started</button>
+    <ul>
+      <li><span>Home</span></li>
+      <li>Technology</li>
+      <li>Creativity</li>
+      <li>Entrepreneurship</li>
+      <li>Self</li>
+      <li>Culture</li>
+      <li>Digital design</li>
+      <li>Popular on Medium</li>
+      <li>Politics</li>
+      <li>More</li>
+    </ul>
+    <div className="navBarButton">
+      <button>Get started</button>
+    </div>
   </div>
 
   <div className="mainContainer">

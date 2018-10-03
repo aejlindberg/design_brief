@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Lora');
 
 body {
-  margin: 0;
+  /* margin: 0; */
   font-family: "Lucida Grande";
+  background-color: #fff;
+  margin-left: 220px;
+  margin-right: 220px;
+  margin-bottom: 40px;
 }
 
 h1 {
@@ -22,27 +26,33 @@ p {
 }
 
 .navBar {
+  width: 100%;
   height: 75px;
-  margin: 0 220px;
   border-bottom: 1px solid #ccc;
+  /* position: relative; */
   display: flex;
-  flex-direction: row;
+  align-items: baseline;
   justify-content: space-between;
-  align-items: center;
 }
 
-.navBar a {
+ul {
+  width: 100%;
   font-size: 10px;
   color: #333;
-  text-decoration: none;
   margin-top: 10px;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  overflow-x: scroll;
+
 }
 
-.navBar span {
+ul span {
   font-weight: bold;
 }
 
-.navBar button {
+.navBarButton button{
  background-color: #1aa77d;
  color: #fff;
  width: 100px;
@@ -54,10 +64,7 @@ p {
 }
 
 .mainContainer {
-  background-color: #fff;
-  margin-left: 220px;
-  margin-right: 220px;
-  margin-bottom: 40px;
+  width: 100%;
 }
 
 .topBox {
@@ -103,7 +110,7 @@ p {
   width: 49%;
   height: 256px;
   margin-top: 15px;
-  border: 0.5px solid #ccc;
+  border: 1px solid #ccc;
   display: flex;
   flex-flow: row;
 }
@@ -182,13 +189,20 @@ p {
     line-height: 14px;
   }
 
+body {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
   .navBar {
-    margin: 20px;
+    height: 70px;
+    width: auto;
+    margin: 0 20px;
   }
 
-  .mainContainer {
-    margin-left: 20px;
-    margin-right: 20px;
+  li {
+    margin-left: 5px;
+    margin-right: 5px;
   }
 
   .topBoxText {
@@ -206,7 +220,8 @@ p {
   .grid {
     display: flex;
     flex-flow: column;
-  }
+    align-items: center;
+ }
 
   .gridBox {
     width: 728px;
@@ -218,6 +233,7 @@ p {
   .gridBoxLeft {
     width: 100%;
   }
+
   .gridBoxLeft img {
     width: 727px;
     height: 170px;
@@ -226,7 +242,6 @@ p {
   .gridBoxRight {
     width: calc(728px - 32px);
     height: 158px;
-    /* position: relative; */
   }
 
   .writerBox {
@@ -244,6 +259,39 @@ p {
 
   .writerBookmark {
     right: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .topBoxText button {
+    margin: 20px 10px 20px 0;
+  }
+
+  .topBoxText {
+    width: auto;
+  }
+
+  .gridBox {
+    width: 280px;
+    height: 337px;
+    display: flex;
+    flex-flow: column;
+  }
+
+  .gridBoxLeft img {
+    width: 100%;
+    height: 170px;
+  }
+
+  .gridBoxRight {
+    width: calc(280px - 32px);
+    height: 167px;
+  }
+
+  .writerBookmark {
+    right: 16px;
+    bottom: 20px;
   }
 
 }
