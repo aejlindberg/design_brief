@@ -41,6 +41,7 @@ ul {
   color: #333;
   margin-top: 10px;
   padding-left: 0;
+  padding-right: 10px;
   list-style: none;
   display: flex;
   justify-content: space-between;
